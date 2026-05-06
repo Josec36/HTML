@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Manrope:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== ESTILO GENERAL (CLARO Y ELEGANTE) ===== */
+body {
+    background: #f8f6f2;
+    color: #2b2b2b;
+    font-family: 'Manrope', sans-serif;
+    padding: 50px 12%;
+    line-height: 1.8;
+}
+
+/* ===== HEADER ===== */
+header {
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 10px;
+}
+
+/* ===== NAV ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* subrayado elegante */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #c4a484;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    margin-bottom: 40px;
+}
+
+section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+    border-left: 4px solid #c4a484;
+    padding-left: 10px;
+}
+
+/* ===== CARDS (TIPO REVISTA) ===== */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+/* efecto hover limpio */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* textos */
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+footer a {
+    color: #c4a484;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
