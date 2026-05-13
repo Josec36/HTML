@@ -15,13 +15,16 @@
 <header>
     <div class="logo">Mi Portafolio | <span>JC</span></div>
 
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Sobre mí</a>
-        <a href="#">Contacto</a>
+     <nav class="nav-links" id="navLinks">
+          <a href="#">Inicio</a>
+          <a href="#">Sobre mí</a>
+          <a href="#">Contacto</a>
         <a href="index.html">Maquetación</a>
         <a href="/bootstrap/index.html">BootStrap</a>
-    </nav>
+     </nav>
+   <div class="hamburger" onclick="toggleMenu()">
+    ☰
+</div>
 
     <audio id="music" loop controls>
         <source src="Corazón.mp3" type="audio/mpeg">
@@ -160,6 +163,11 @@
 
 <!-- JS -->
 <script src="modal.js"></script>
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
