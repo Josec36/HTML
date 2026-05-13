@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --verde-olivo: #6b705c;
+    --verde-oscuro: #4f5d4a;
+    --beige: #f5f3ef;
+    --gris: #3a3a3a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--beige);
+    color: var(--gris);
+}
+
+/* HEADER LIMPIO */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0ddd7;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--verde-olivo);
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--gris);
+}
+
+/* HERO TIPO LANDING */
+.hero-semana {
+    padding: 80px 60px 40px;
+}
+
+.typing-semana {
+    font-size: 42px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--verde-olivo);
+
+    width: 0;
+    animation: typing 2.5s steps(25) forwards, blink 0.7s infinite;
+}
+
+.subtitulo {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* TIMELINE MODERNO (NO CAJAS) */
+.timeline {
+    padding: 40px 60px;
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.item i {
+    font-size: 18px;
+    color: var(--verde-olivo);
+    margin-top: 5px;
+}
+
+.item h3 {
+    margin-bottom: 5px;
+    color: var(--verde-oscuro);
+}
+
+.item p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* REFLEXIÓN LIMPIA */
+.reflexion {
+    padding: 40px 60px;
+}
+
+.reflexion h2 {
+    color: var(--verde-olivo);
+    margin-bottom: 10px;
+}
+
+.reflexion p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* DESCARGAS */
+.descargas {
+    padding: 40px 60px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #e0ddd7;
+
+    flex: 1;
+    transition: 0.3s;
+}
+
+.card i {
+    color: var(--verde-olivo);
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--verde-olivo);
+    color: var(--verde-olivo);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.card a:hover {
+    background: var(--verde-olivo);
+    color: white;
+}
+
+/* ANIMACIONES */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

@@ -85,7 +85,7 @@ nav a:hover::after {
     font-weight: 600;
 }
 
-/* SOLO PARA EL TYPING */
+/* TYPING */
 .typing {
     display: inline-block;
     white-space: nowrap;
@@ -286,4 +286,45 @@ nav a:hover::after {
 /* Cursor */
 @keyframes cursor {
     50% { border-color: transparent; }
+}
+
+
+/* ===== BOTÓN CIRCULAR UNIDADES ===== */
+
+.card {
+    position: relative;
+}
+
+/* circulito flecha */
+.go-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(107, 112, 92, 0.15); /* usa tu verde-olivo */
+    border: 1px solid rgba(107, 112, 92, 0.25);
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* icono */
+.go-btn i {
+    font-size: 14px;
+    color: var(--verde-olivo);
+}
+
+/* hover */
+.go-btn:hover {
+    transform: scale(1.15);
+    background: rgba(107, 112, 92, 0.25);
 }

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Portafolio | JC</title>
-    <link rel="stylesheet" href="portafolio.css">
 
-    <!-- Iconos -->
+    <link rel="stylesheet" href="portafolio.css">
+    <link rel="stylesheet" href="modal.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
 <header>
@@ -21,12 +23,9 @@
         <a href="/bootstrap/index.html">BootStrap</a>
     </nav>
 
-    <!-- AUDIO -->
-
-<audio id="music" loop controls>
-    <source src="Corazón.mp3" type="audio/mpeg">
-</audio>
-
+    <audio id="music" loop controls>
+        <source src="Corazón.mp3" type="audio/mpeg">
+    </audio>
 </header>
 
 <!-- HERO -->
@@ -50,8 +49,8 @@
 
     <div class="hero-img">
         <video width="400" controls>
-         <source src="Video.mp4" type="video/mp4">
-       </video>
+            <source src="Video.mp4" type="video/mp4">
+        </video>
     </div>
 </section>
 
@@ -84,39 +83,79 @@
     </div>
 </section>
 
-<!-- PROYECTOS -->
+<!-- UNIDADES -->
 <section class="proyectos">
-    <h2>Mis proyectos</h2>
+    <h2>Unidades</h2>
 
     <div class="cards">
 
-        <div class="card">
-            <h3>Proyecto 1</h3>
-            <p>Aplicación web moderna.</p>
+        <div class="card" onclick="openModal('modal1')">
+            <h3>Unidad 1</h3>
+            <p>Semanas 1 - 5</p>
+
+            <div class="go-btn">
+                <i class="fas fa-eye"></i>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Proyecto 2</h3>
-            <p>Sistema de gestión.</p>
+        <div class="card" onclick="openModal('modal2')">
+            <h3>Unidad 2</h3>
+            <p>Semanas 6 - 10</p>
+
+            <div class="go-btn">
+                <i class="fas fa-eye"></i>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Proyecto 3</h3>
-            <p>Diseño UI elegante.</p>
-        </div>
+        <div class="card" onclick="openModal('modal3')">
+            <h3>Unidad 3</h3>
+            <p>Semanas 11 - 16</p>
 
-        <div class="card">
-            <h3>Proyecto 4</h3>
-            <p>Landing page profesional.</p>
-        </div>
-
-        <div class="card">
-            <h3>Proyecto 5</h3>
-            <p>App interactiva.</p>
+            <div class="go-btn">
+                <i class="fas fa-eye"></i>
+            </div>
         </div>
 
     </div>
 </section>
+
+<!-- MODALES -->
+
+<div class="modal" id="modal1">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+
+        <h2>Unidad 1</h2>
+        <p>HTML5, HTTP/HTTPS y fundamentos de la web.</p>
+
+        <button onclick="goToPage('unidad1.html')">Continuar</button>
+    </div>
+</div>
+
+<div class="modal" id="modal2">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+
+        <h2>Unidad 2</h2>
+        <p>CSS3, diseño web y estructura visual moderna.</p>
+
+        <button onclick="goToPage('unidad2.html')">Continuar</button>
+    </div>
+</div>
+
+<div class="modal" id="modal3">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+
+        <h2>Unidad 3</h2>
+        <p>JavaScript y desarrollo web moderno.</p>
+
+        <button onclick="goToPage('unidad3.html')">Continuar</button>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="modal.js"></script>
 
 </body>
 </html>
