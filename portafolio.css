@@ -20,15 +20,21 @@ body {
     color: var(--gris);
 }
 
-/* NAVBAR MEJORADA */
+/* NAVBAR FIJA Y MÁS DELGADA */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
 
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
+    padding: 8px 60px;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+
     border-bottom: 1px solid #e0ddd7;
 }
 
@@ -329,22 +335,49 @@ nav a:hover::after {
     background: rgba(107, 112, 92, 0.25);
 }
 
+/*BOTON DEL CV*/
 .cv-btn{
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
-    padding: 12px 22px;
-    background: #00ff99;
-    color: #000;
+
+    margin-top: 28px;
+    padding: 13px 24px;
+
+    background: rgba(107, 112, 92, 0.12);
+    color: var(--verde-oscuro);
+
+    border: 1px solid rgba(107, 112, 92, 0.25);
+    border-radius: 14px;
+
     text-decoration: none;
-    border-radius: 12px;
+    font-size: 14px;
     font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0,255,153,0.5);
+    letter-spacing: 0.3px;
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.35s ease;
 }
 
-.cv-btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(0,255,153,0.9);
+/* icono */
+.cv-btn i{
+    font-size: 14px;
+    transition: transform 0.3s ease;
 }
+
+/* hover elegante */
+.cv-btn:hover{
+    background: var(--verde-olivo);
+    color: white;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(107, 112, 92, 0.18);
+}
+
+/* movimiento del icono */
+.cv-btn:hover i{
+    transform: translateY(2px);
+}
+
